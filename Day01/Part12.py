@@ -1,6 +1,5 @@
-filename = "Day01/input"
-lines = []
-with open(filename) as file:
+from pathlib import Path
+with open(Path(__file__).resolve().parent.joinpath("inputtest")) as file:
     lines = [line.rstrip() for line in file]
 
 # part 1

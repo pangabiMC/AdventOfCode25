@@ -1,8 +1,8 @@
 import re
-
-filename = "Day02/input"
-with open(filename) as file:
+from pathlib import Path
+with open(Path(__file__).resolve().parent.joinpath("inputtest")) as file:
     data = file.read()
+    
 rangeregex = r"(\d+)-(\d+)"
 ranges = [(int(m[1]), int(m[2])) for m in re.finditer(rangeregex, data)]
 
